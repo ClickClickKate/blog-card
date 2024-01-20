@@ -1,0 +1,124 @@
+/* ===fonts ===*/
+@import url("https://fonts.googleapis.com/css2?family=Figtree:wght@600;800&display=swap");
+
+/* == CSS Global Variables */
+
+:root {
+  --clr-primary: hsl(47, 88%, 63%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-grey: hsl(0, 0%, 50%);
+  --clr-black: hsl(0, 0%, 7%);
+  --ff-primary: "Figtree", sans-serif;
+  --transition: all 0.3s linear;
+  --radius: 10px;
+}
+
+.clearfix::after,
+.clearfix::before {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* == reset browser default == */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* default properties */
+
+body {
+  font-family: var(--ff-primary);
+  color: var(--clr-black);
+  font-size: 1rem;
+  background-color: var(--clr-primary);
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 1.35rem;
+}
+
+h2 {
+  font-size: 1.1rem;
+}
+h3 {
+  font-size: 0.85rem;
+  font-weight: lighter;
+}
+
+p {
+  color: var(--clr-grey);
+}
+.btn {
+  text-transform: capitalize;
+  background: var(--clr-primary);
+  padding: 0.5rem 0.75rem;
+  display: inline-block;
+  font-weight: 800;
+  font-size: 1rem;
+  border: none;
+  color: var(--clr-black);
+  margin: 1rem 0;
+}
+.main-con {
+  padding: 2rem;
+  width: 375px;
+  border: 1px solid var(--clr-black);
+  border-radius: var(--radius);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  background: var(--clr-white);
+  box-shadow: 9px 9px 0px 4px var(--clr-black);
+}
+
+.main-con:hover h1 {
+  color: var(--clr-primary);
+  cursor: pointer;
+}
+
+.main-con:hover {
+  box-shadow: 15px 15px 0px 4px var(--clr-black);
+}
+
+.main-img {
+  border-radius: var(--radius);
+}
+.artist-con {
+  margin-top: 2rem;
+}
+.avatar-img {
+  width: 2.5rem;
+  height: auto;
+  float: left;
+  margin-right: 1rem;
+}
+.artist-name {
+  line-height: 3rem;
+}
+
+@media screen (min-width: 1500px) {
+  .main-con {
+    width: 1440px;
+  }
+}
